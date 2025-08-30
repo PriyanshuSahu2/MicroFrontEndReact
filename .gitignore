@@ -6,6 +6,7 @@ dist/
 build/
 .cache/
 .vite/
+
 .env
 .env.local
 .env.*.local
@@ -60,5 +61,6 @@ TestResults/
 # Others
 # ================================
 .vs/
+.history/
 *.zip
 *.tar.gz

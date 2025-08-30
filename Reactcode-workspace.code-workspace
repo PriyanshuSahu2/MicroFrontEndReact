@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "PostRFQ.MFE"
+		},
+		{
+			"path": "RFQ.MFE"
+		},
+		{
+			"path": "PreRFQ.MFE"
+		},
+		{
+			"path": "ShellApp"
+		}
+	],
+	"settings": {}
+}

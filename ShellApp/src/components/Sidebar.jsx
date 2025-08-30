@@ -11,9 +11,9 @@ import { Avatar, Button, Divider, Text, Select, Group } from "@mantine/core";
 import { Link } from "react-router-dom";
 
 const navItems = [
-  { name: "Dashboard", icon: IconLayoutDashboard,to:'/preRFQ/dashboard' },
-  { name: "My Accounts", icon: IconFolders ,to:'/preRFQ/account'},
-  { name: "PR Management", icon: IconReceipt,to:'/preRFQ/pr-management' },
+  { name: "Dashboard", icon: IconLayoutDashboard,to:'/pre/dashboard' },
+  { name: "My Accounts", icon: IconFolders ,to:'/pre/account'},
+  { name: "PR Management", icon: IconReceipt,to:'/pre/pr-management' },
   { name: "Requirements", icon: IconCalendarBolt,to:'/rfq/requirement' },
   { name: "Contracts", icon: IconUserCircle,to:'/postRFQ/contracts' },
   { name: "POs", icon: IconSettings,to:'/postRFQ/po' },
