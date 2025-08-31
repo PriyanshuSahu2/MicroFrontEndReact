@@ -6,13 +6,13 @@ import MyAccounts from "./pages/MyAccounts";
 
 const App = () => {
   return (
-    <Router>
+
       <Routes>
         <Route path="pr-management" element={<PR />} />
-        <Route path="pre/dashboard" element={<Dashboard />} />
-        <Route path="/accounts" element={<MyAccounts />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="accounts" element={<MyAccounts />} />
       </Routes>
-    </Router>
+
   );
 };
 

@@ -4,7 +4,7 @@ import ShellLayout from "./components/Layout";
 import "@mantine/core/styles.css";
 
 // Lazy load micro-frontend
-const PreRFQPage = React.lazy(() => import("preRfq/PreRFQPage"));
+const PreRFQPage = React.lazy(() => import("preRfq/Routes"));
 const RFQPage = React.lazy(() => import("rfq/RFQPage"));
 const PostRFQPage = React.lazy(() => import("postRfq/PostRFQPage"));
 

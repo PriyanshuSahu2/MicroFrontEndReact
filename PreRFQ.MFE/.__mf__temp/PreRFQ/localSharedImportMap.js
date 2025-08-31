@@ -12,6 +12,11 @@
           let pkg = await import("__mf__virtual/PreRFQ__prebuild__react_mf_2_dom__prebuild__.js")
           return pkg
         }
+      ,
+        "react-router-dom": async () => {
+          let pkg = await import("__mf__virtual/PreRFQ__prebuild__react_mf_2_router_mf_2_dom__prebuild__.js")
+          return pkg
+        }
       
     }
       const usedShared = {
@@ -65,6 +70,32 @@
             shareConfig: {
               singleton: false,
               requiredVersion: "^19.1.1"
+            }
+          }
+        ,
+          "react-router-dom": {
+            name: "react-router-dom",
+            version: "7.8.2",
+            scope: ["default"],
+            loaded: false,
+            from: "PreRFQ",
+            async get () {
+              usedShared["react-router-dom"].loaded = true
+              const {"react-router-dom": pkgDynamicImport} = importMap 
+              const res = await pkgDynamicImport()
+              const exportModule = {...res}
+              // All npm packages pre-built by vite will be converted to esm
+              Object.defineProperty(exportModule, "__esModule", {
+                value: true,
+                enumerable: false
+              })
+              return function () {
+                return exportModule
+              }
+            },
+            shareConfig: {
+              singleton: false,
+              requiredVersion: "^7.8.2"
             }
           }
         

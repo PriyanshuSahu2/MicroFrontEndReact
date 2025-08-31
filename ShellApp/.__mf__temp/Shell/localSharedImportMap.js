@@ -12,6 +12,11 @@
           let pkg = await import("__mf__virtual/Shell__prebuild__react_mf_2_dom__prebuild__.js")
           return pkg
         }
+      ,
+        "react-router-dom": async () => {
+          let pkg = await import("__mf__virtual/Shell__prebuild__react_mf_2_router_mf_2_dom__prebuild__.js")
+          return pkg
+        }
       
     }
       const usedShared = {
@@ -67,9 +72,59 @@
               requiredVersion: "^19.1.1"
             }
           }
+        ,
+          "react-router-dom": {
+            name: "react-router-dom",
+            version: "7.8.2",
+            scope: ["default"],
+            loaded: false,
+            from: "Shell",
+            async get () {
+              usedShared["react-router-dom"].loaded = true
+              const {"react-router-dom": pkgDynamicImport} = importMap 
+              const res = await pkgDynamicImport()
+              const exportModule = {...res}
+              // All npm packages pre-built by vite will be converted to esm
+              Object.defineProperty(exportModule, "__esModule", {
+                value: true,
+                enumerable: false
+              })
+              return function () {
+                return exportModule
+              }
+            },
+            shareConfig: {
+              singleton: false,
+              requiredVersion: "^7.8.2"
+            }
+          }
         
     }
       const usedRemotes = [
+                {
+                  entryGlobalName: "preRfq",
+                  name: "preRfq",
+                  type: "module",
+                  entry: "http://localhost:3001/remoteEntry.js",
+                  shareScope: "default",
+                }
+          ,
+                {
+                  entryGlobalName: "rfq",
+                  name: "rfq",
+                  type: "module",
+                  entry: "http://localhost:3002/remoteEntry.js",
+                  shareScope: "default",
+                }
+          ,
+                {
+                  entryGlobalName: "postRfq",
+                  name: "postRfq",
+                  type: "module",
+                  entry: "http://localhost:3003/remoteEntry.js",
+                  shareScope: "default",
+                }
+          
       ]
       export {
         usedShared,
